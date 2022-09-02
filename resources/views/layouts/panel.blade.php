@@ -27,12 +27,6 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
-        <!-- Preloader -->
-        <!-- <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ asset(env('APP_ICON')) }}" alt="AdminLTELogo" height="60" width="60">
-        </div> -->
-
         @include('layouts.components.navbar')
         @include('layouts.components.sidebar')
 
@@ -45,10 +39,6 @@
                 <b>Version</b> 3.2.0
             </div>
         </footer> -->
-
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
     </div>
 
 
@@ -60,10 +50,19 @@
     <script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('adminlte/dist/js/adminlte.js') }}"></script>
-    <script src="{{ asset('adminlte/dist/js/demo.js') }}"></script>
 
     <script src="{{ asset('myDist/js/default.js') }}"></script>
     <script src="{{ asset('myDist/js/ajax.js') }}"></script>
+    <script>
+        if (sessionStorage.getItem("mode") == 'night') {
+            $('#switch-night-mode').prop('checked', true)
+            nighMode(true)
+        }
+
+        $('#switch-night-mode').change(function(e) {
+            nighMode(e.target.checked)
+        })
+    </script>
 
     @yield('script')
 </body>
