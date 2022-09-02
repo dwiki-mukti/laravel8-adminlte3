@@ -1,0 +1,63 @@
+
+/* ########### background ############ */
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-profile {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: gray;
+}
+
+.bg-profile-editable {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bg-profile-editable:hover {
+    color: #fff;
+}
+
+
+
+/* ########### paginate ############ */
+.paginate {
+    display: inline-flex;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    border-radius: 3px;
+    max-width: 18rem;
+
+}
+
+.paginate>* {
+    border-left: 1px solid gray;
+    max-width: 2.7rem;
+    padding: 0.1rem 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paginate>*:hover:not(.paginate-disabled),
+.paginate>.paginate-active {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.paginate>*:not(.paginate-disabled):not(.paginate-active) {
+    cursor: pointer;
+}
+
+.paginate>.paginate-disabled {
+    color: rgb(0, 0, 0, 20%);
+}

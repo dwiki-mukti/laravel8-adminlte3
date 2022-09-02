@@ -10,4 +10,14 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public $messages;
+
+    public function __construct()
+    {
+        $this->messages = [
+            'required' => 'Field ini tidak boleh kosong',
+            'string' => 'Value field ini harus berupa text',
+            'mimes' => 'Format file tidak diizinkan'
+        ];
+    }
 }

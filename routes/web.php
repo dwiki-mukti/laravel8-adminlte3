@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,20 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.dashboard');
-});
+// Route::resource('login', LoginController::class)->only(['index', 'show', 'post']);
+Route::post("logout", [LoginController::class, "logout"])->name("logout");
+
+Route::get('/', fn () => (view('admin.dashboard')))->name('dashboard');
+
+
+
+
+
+
+// ============= starter page ================
 Route::group([
     'as' => 'sample.',
     'prefix' => 'sample'
 ], function () {
-    Route::get('/form', function () {
-        return view('sample.form');
-    })->name('form');
-    Route::get('/basic-table', function () {
-        return view('sample.basic_table');
-    })->name('basic_table');
-    Route::get('/data-table', function () {
-        return view('sample.data_table');
-    })->name('data_table');
+    Route::get('/form', fn () => (view('sample.form')))->name('form');
+    Route::get('/basic-table', fn () => (view('sample.table')))->name('table');
+    Route::get('/data-table', fn () => (view('sample.dataTables')))->name('dataTables');
 });

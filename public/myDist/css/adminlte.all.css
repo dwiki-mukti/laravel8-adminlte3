@@ -1,0 +1,113 @@
+/* #################### navbar #################### */
+.dropdown-item:active {
+    color: inherit !important;
+    background-color: inherit !important;
+}
+
+.brand-link,
+.navbar {
+    min-height: 40px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background: #f4f6f9 !important;
+    border: none !important;
+}
+
+
+
+/* #################### sidebar #################### */
+.main-sidebar {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%), 0 6px 6px rgb(0 0 0 / 10%) !important;
+}
+
+.nav-sidebar {
+    text-transform: capitalize;
+}
+
+.nav-sidebar .nav-link>.right,
+.nav-sidebar .nav-link>p>.right {
+    top: 1rem !important;
+}
+
+.nav-legacy.nav-sidebar>.nav-item>.nav-link.active {
+    background-color: rgba(0, 123, 255, .05) !important;
+    color: rgba(0, 123, 255, 1) !important;
+}
+
+
+[class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link.active,
+[class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link:hover {
+    background: inherit !important;
+    color: var(--blue) !important;
+}
+
+[class*=sidebar-light-] .nav-treeview>.nav-item>.nav-link:hover {
+    margin-left: 5px;
+    transition: .3s;
+}
+
+[class*=sidebar-light-] .sidebar a:not(.active) {
+    color: #6c757d !important;
+}
+
+
+
+.nav-sidebar>.nav-item>.nav-link {
+    padding: .7rem 1rem !important;
+}
+
+
+/* #################### card #################### */
+.card-header {
+    padding: 1.25rem 1.25rem .75rem 1.25rem !important;
+    display: flex;
+    align-items: center;
+}
+
+.card-title {
+    text-transform: capitalize;
+    font-weight: 600 !important;
+}
+
+.card-header>.card-tools,
+.btn {
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.card-header>.card-tools {
+    margin-left: auto;
+}
+
+.card-header,
+.btn {
+    white-space: nowrap;
+}
+
+.card-footer {
+    display: flex;
+}
+
+
+/* #################### table #################### */
+thead>tr>th {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.table {
+    white-space: nowrap;
+}
+
+
+/* #################### input #################### */
+option,
+label {
+    text-transform: capitalize;
+}

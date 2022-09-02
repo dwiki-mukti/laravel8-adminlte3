@@ -1,0 +1,15 @@
+/* ########### dropdown ############ */
+.dropdown-filter {
+    position: absolute !important;
+    width: 250px;
+    margin-top: .5rem;
+    display: none;
+}
+
+.dropdown-filter label {
+    margin: 0px;
+}
+
+.dropdown-filter .form-group {
+    margin-bottom: .5rem;
+}
