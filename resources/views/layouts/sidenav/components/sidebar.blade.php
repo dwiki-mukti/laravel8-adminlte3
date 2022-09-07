@@ -1,6 +1,6 @@
-<aside class="main-sidebar sidebar-light-primary" id="container-sidebar">
-    <div class="brand-link brand-text  d-flex justify-content-between">
-        <a href="#" class="font-weight-light">{{ env('APP_NAME') }}</a>
+<aside class="main-sidebar sidebar-light-primary" id="sidebar">
+    <div class="brand-link brand-text custom-brand-link">
+        <a href="{{ Route('dashboard') }}" class="font-weight-light" style="color: inherit">{{ env('APP_NAME') }}</a>
 
         <div class="form-group mb-0 d-flex align-items-center" style="gap: .3rem; line-height: 25px;">
             <i class="far fa-moon"></i>
@@ -24,20 +24,20 @@
                     <a href="#" class="nav-link" id="sidebarHasItem">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Starter Pages
+                            Dropdown menu
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <p><b>-</b> Active Page</p>
+                                <p><b>-</b> Submenu</p>
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="nav-header">STARTER TEMPLATE</li>
+                <li class="nav-header">STARTER CONTENT</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -60,6 +60,28 @@
                         <li class="nav-item">
                             <a href="{{ Route('sample.dataTables') }}" class="nav-link" id="sidebarSampleDataTable">
                                 <p><b>-</b> Sample Data Table</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Top Navigation
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ Route('sample.topnav') }}" class="nav-link" id="sidebarSampleTopnav">
+                                <p><b>-</b> Top Navigation</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ Route('sample.topnavside') }}" class="nav-link" id="sidebarSampleTopnavside">
+                                <p><b>-</b> Top Navigation</p>
                             </a>
                         </li>
                     </ul>

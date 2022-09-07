@@ -1,6 +1,6 @@
-@extends('layouts.topnav.panel')
+@extends('layouts.topnavside.panel')
 
-@section('title', 'SampleTopnav')
+@section('title', 'SampleTopnavside')
 
 @section('content')
     <div class="content-wrapper">
@@ -10,6 +10,6 @@
 
 @section('script')
     <script>
-        sidebarActive('sidebarSampleTopnav')
+        sidebarActive('sidebarSampleTopnavside')
     </script>
 @endsection

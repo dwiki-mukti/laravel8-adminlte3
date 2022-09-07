@@ -23,12 +23,12 @@ function nighMode(isDark) {
     if (isDark) {
         sessionStorage.setItem("mode", "night");
         $('body').addClass('dark-mode')
-        $('#container-sidebar').removeClass('sidebar-light-primary').addClass('sidebar-dark-primary')
-        $('#sidebar').removeClass('bg-light navbar-light').addClass('bg-dark navbar-dark')
+        $('#sidebar').removeClass('sidebar-light-primary').addClass('sidebar-dark-primary')
+        $('#navbar').removeClass('navbar-white navbar-light').addClass('navbar-dark')
     } else {
         sessionStorage.setItem("mode", "light");
         $('body').removeClass('dark-mode')
-        $('#container-sidebar').removeClass('sidebar-dark-primary').addClass('sidebar-light-primary')
-        $('#sidebar').removeClass('bg-dark navbar-dark').addClass('bg-light navbar-light')
+        $('#sidebar').removeClass('sidebar-dark-primary').addClass('sidebar-light-primary')
+        $('#navbar').removeClass('navbar-dark').addClass('navbar-white navbar-light')
     }
 }

@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ env('APP_NAME') }} | @yield('title')</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -25,24 +23,14 @@
     @yield('style')
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="layout-top-nav sidebar-collapse">
     <div class="wrapper">
-        @include('layouts.components.navbar')
-        @include('layouts.components.sidebar')
+        @include('layouts.topnavside.components.navbar')
+        @include('layouts.topnavside.components.sidebar')
 
         @yield('content')
 
-        <!-- <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer> -->
     </div>
-
-
-
 
 
 

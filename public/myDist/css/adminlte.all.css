@@ -4,18 +4,17 @@
     background-color: inherit !important;
 }
 
-.brand-link,
+.custom-brand-link,
 .navbar {
-    min-height: 40px;
+    min-height: 4.5rem;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
 }
 
-.navbar {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-    background: #f4f6f9 !important;
-    border: none !important;
+.custom-brand-link{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
 }
 
 

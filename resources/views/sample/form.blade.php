@@ -1,4 +1,4 @@
-@extends('layouts.panel')
+@extends('layouts.sidenav.panel')
 
 @section('title', 'SampleForm')
 

@@ -17,7 +17,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return view('client.auth.login');
+        return view('admin.auth.login');
     }
 
     /**
@@ -45,7 +45,10 @@ class LoginController extends Controller
         ], $this->messages);
 
         # get user
-        $user = User::where('email', $request->email)->first();
+        $user = User::where([
+            ['email', $request->email],
+            ['role', 'Client']
+        ])->first();
 
         #check user
         if (!$user) {
@@ -72,7 +75,6 @@ class LoginController extends Controller
      */
     public function show($id)
     {
-        dd(1);
         if ($id != 'admin') {
             return abort(404);
         }
@@ -106,11 +108,14 @@ class LoginController extends Controller
         ], $this->messages);
 
         # get user
-        $user = User::where('email', $request->email)->first();
+        $user = User::where([
+            ['email', $request->email],
+            ['role', 'Admin']
+        ])->first();
 
         #check user
         if (!$user) {
-            return back()->withInput()->withErrors(['email' => 'User tidak ditemukan.']);;
+            return back()->withInput()->withErrors(['email' => 'Akun admin tidak ditemukan.']);;
         }
 
         # check password
@@ -122,7 +127,7 @@ class LoginController extends Controller
         Auth::login($user, $request->remember);
 
         #return
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 
     /**
@@ -143,9 +148,9 @@ class LoginController extends Controller
         Auth::logout();
 
         if ($role == 'Admin') {
-            return redirect()->route('login.index');
+            return redirect()->route('admin.login.index');
         } else {
-            return redirect()->route('login.show', 'admin');
+            return redirect()->route('admin.login.show', 'admin');
         }
     }
 }
