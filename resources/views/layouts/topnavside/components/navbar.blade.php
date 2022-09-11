@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-light navbar-white" id="navbar">
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-white" id="navbar">
     <div class="container">
         <a href="{{ Route('home') }}" class="navbar-brand" style="min-width: 140px;">
             <span class="brand-text font-weight-light">{{ env('APP_NAME') }}</span>

@@ -69,7 +69,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Top Navigation
+                            Layouts
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -81,7 +81,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ Route('sample.topnavside') }}" class="nav-link" id="sidebarSampleTopnavside">
-                                <p><b>-</b> Top Navigation</p>
+                                <p><b>-</b> Top Nav has side</p>
                             </a>
                         </li>
                     </ul>
